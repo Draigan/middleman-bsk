@@ -1,15 +1,19 @@
 // Custom.scss
 // Option A: Include all of Bootstrap
 
-// Include any default variable overrides here (though functions won't be available)
-@import "../assets/scss/bootstrap.scss"
-// @import "submenu"
-
-// Then add additional custom code here
 $purple: #652D90
 $yellow: #FFC001
+// Include any default variable overrides here (though functions won't be available)
+@import "../assets/scss/bootstrap.scss"
+@import "submenu"
+@import "layout"
+
+// Then add additional custom code here
 .my-purple
   background-color: $purple
+
+.my-light-grey
+  background-color: #696969
 
 .my-yellow-bg
   background-color: #FFC001 !important
@@ -32,6 +36,7 @@ body
 #logo 
   width: 100%
 
+
 section
   margin-bottom: $spacer 
 
@@ -42,6 +47,13 @@ nav
         color: $purple !important
         transition-duration: .3s !important
 
+.main-button
+  border: 1px solid grey
+  color: $yellow
+
+.main-button:hover
+  border: 1px solid grey
+  color: white
 
 .footer--nav
   li
@@ -136,10 +148,11 @@ nav
   // display: inline-block
 
 .map--buttons
-  max-width: 20rem
+  max-width: 25rem
   display: flex
   flex-wrap: wrap
-  
+  gap: 3px 
+
 .gta-image
   aspect-ratio: 16 / 9
   width: 100%

@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,9 +13,137 @@
     <%= javascript_include_tag "unpoly_config", defer: true, type: "module" %>
     <%= stylesheet_link_tag "main.css" %>
     <%= javascript_include_tag "bootstrap.bundle.js" %>
+    <%= javascript_include_tag "map-changer.js", defer: true, type: "module" %>
+    <%= javascript_include_tag "submenu.js", defer: true, type: "module" %>
     <%= favicon_tag 'images/favicon.png' %>
   </head>
+
   <body>
+    <div class="layout">
+    <div class="layout--header">
+  <nav id="#navmenu" class="navbar navbar-expand-lg align-middle px-2 my-yellow-bg">
+
+    <a href="#" class="navbar-brand">
+      <img src="images/logo.jpg" id="logo" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+      aria-controls="navmenu " aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse px-5 navbar-collapse" id="navmenu">
+
+      <ul class="navbar-nav ms-auto " id="navmenu">
+        <li class="nav-item ">
+          <a href="/index.html" class="nav-link text-dark">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/webuy.html" class="nav-link text-dark">We Buy</a>
+        </li>
+        <li class="nav-item">
+          <a href="/wesell.html" class="nav-link text-dark">We Sell</a>
+        </li>
+        <li class="nav-item">
+          <a href="/aboutus.html" class="nav-link text-dark">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/consignment.html" class="nav-link text-dark">Consignment</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link text-dark">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="#instructors" data-submenu-link class="nav-link text-dark dropdown-toggle">Social Media</a>
+          <div class="my-submenu">
+            <ul data-dropdown class="my-submenu--dropdown p-3 rounded shadow-lg bg-light">
+              <li> <img class="my-submenu--icon" src="images/facebook.svg" alt="">
+                <span class="fw-bold class=" my-submenu--icon""> Facebook</span>
+              </li>
+              <li>
+                <a class="dropdown-item px-3" href="#">Toronto</a>
+              </li>
+              <li>
+                <a class="dropdown-item px-3" href="#">Scarborough</a>
+              </li>
+              <li>
+                <a class="dropdown-item px-3" href="#">Ajax</a>
+              </li>
+              <li>
+                <a class="dropdown-item px-3" href="#">Oshawa</a>
+              </li>
+              <li> <img class="my-submenu--icon" src="images/youtube.svg" alt="">
+                <span class="fw-bold class=" my-submenu--icon""> Youtube</span>
+              </li>
+              <li>
+                <a class="dropdown-item px-3" href="#">All Locations</a>
+              </li>
+        </li>
+      </ul>
+    </div>
+    </li>
+    </ul>
+    </div>
+  </nav>
+
+    </div>
+    <div class="layout--main">
     <%= yield %>
+    </div>
+  <!-- Footer -->
+
+  <div class="layout--footer">
+  <footer>
+    <div class="container-fluid">
+      <div class="row footer--phone-bg">
+        <div class="col d-flex align-items-center">
+          <div class="footer--phone-bubble d-flex flex-column align-items-center justify-content-center">
+            <h1 class="text-light">
+              Call Now
+            </h1>
+            <h2 class="text-light">
+              For A Free Quote
+            </h2>
+            <h1 class=" text-light">
+              (647)348-1763
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer Proper -->
+
+
+    <div class="container">
+      <div class="row mt-3">
+
+        <a class="col-xl-2 d-flex justify-content-center" href="/">
+          <img src="images/king.png" class="footer--logo" alt="">
+        </a>
+        <div class="col-xl-3">
+
+          <p class="my-yellow-color text-center pt-5 p-3"> You never know what treasures you will find in our stores!
+          </p>
+        </div>
+
+
+        <ul class="nav footer--nav col-xl-7 justify-content-center align-items-center">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">We Buy</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">We Sell</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Consignment</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Social Media</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+
+
+    <p class="col-xl-4 mb-0 mx-auto text-center fw-light"> &copy; 2022 Buy & Sell Kings | Website Created By Draigan</p>
+  </footer>
+  </div>
+    </div>
   </body>
 </html>
