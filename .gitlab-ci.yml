@@ -1,0 +1,28 @@
+image: ruby:3.0
+
+cache:
+  paths:
+  - vendor
+
+.build_script: &build_script 
+  - apt-get update -yqqq
+  - apt-get install -y nodejs
+  - bundle install --path vendor
+  - mkdir -p public/assets
+  - bundle exec middleman build --build-dir=public --http-prefix=/portfolio
+  - cp -r source/assets public/assets
+
+test:
+  script: *build_script
+  rules:
+    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+
+pages:
+  script: *build_script
+  artifacts:
+    paths:
+    - public
+  rules:
+    - when: manual
+    # - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    #   when: manual

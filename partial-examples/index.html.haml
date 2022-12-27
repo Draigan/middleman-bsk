@@ -1,0 +1,13 @@
+---
+title: Skills
+layout: main
+---
+
+
+%h1 Tech & Skills
+
+.skill-wrapper
+  .skill-wrapper--inner-section.-with-description
+    - skills_including_projects.each do |s| 
+      = partial('skills/skill', locals: { skill: s, bem_modifier_skill_description: "-with-description" } ) 
+

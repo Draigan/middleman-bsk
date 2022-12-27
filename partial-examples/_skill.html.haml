@@ -1,0 +1,25 @@
+.skill{class: bem_modifier_skill_description}
+  .skill--image
+    = link_to "/skills/#{skill.slug}.html" do
+      = image_tag "/images/#{skill.image}", class: "skill--image", alt: skill.alt
+
+  %h2.skill--heading
+    = skill.name  
+
+  %p.skill--description
+    = skill.description 
+
+
+  .skill--buttons
+    = link_to "/skills/#{skill.slug}.html", class:"btn -black" do 
+      %span.btn--text
+        Explore
+    - if skill.projects.size > 0 
+      = link_to "/projects/using/#{skill.slug}.html", 'up-layer':"new", 'up-target': ".project-page--left-column", class:"btn -black" do 
+        %span.btn--text
+          = skill.projects.size 
+          - if skill.projects.size != 1
+            = "projects"
+          - else
+            = "project"
+
