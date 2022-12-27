@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title><%= current_page.data.title || "Middleman" %></title>
+
+    <%= stylesheet_link_tag "/assets/revealjs/dist/reset.css" %>
+    <%= stylesheet_link_tag "/assets/revealjs/dist/reveal.css" %>
+    <%= stylesheet_link_tag "/assets/revealjs/dist/theme/blood.css" %>
+		<!-- Theme used for syntax highlighted code -->
+    <%= stylesheet_link_tag "/assets/revealjs/plugin/highlight/monokai.css" %> 
+
+    <%= stylesheet_link_tag "/stylesheets/reveal.css" %> 
+    <%= javascript_include_tag "/javascripts/reveal.js", defer: true %>  
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<%= yield %>
+				
+			</div>
+		</div>
+
+    <%= javascript_include_tag"/assets/revealjs/dist/reveal.js" %>  
+    <%= javascript_include_tag"/assets/revealjs/plugin/notes/notes.js" %>  
+    <%= javascript_include_tag"/assets/revealjs/plugin/highlight/highlight.js" %>  
+    <%= javascript_include_tag"/assets/revealjs/plugin/math/math.js" %>  
+    <%# javascript_include_tag"assets/revealjs/plugin/markdown/markdown.js" %>   
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [  RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+        <%# markdown handled by middleman, add revealmarkdown to plugins RevealMarkdown, %> 
+			});
+			
+		</script>
+		
+	</body>
+</html>
+
