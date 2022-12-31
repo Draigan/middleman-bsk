@@ -21,6 +21,9 @@ $yellow: #FFC001
 .my-yellow-color
   color: $yellow !important
 
+.my-red-color
+  color: #b20000 !important
+
 .dark-purple
   color: #1e013b !important
 
@@ -97,6 +100,24 @@ nav
   filter: brightness(0.9)
 
 
+.webuy-gold
+  position: relative
+  width: 100%
+
+.webuy-gold::before 
+  content: ""
+  position: absolute
+  top: 0 
+  left: 0
+  width: 100%
+  height: 100%
+  background-image: url("images/moneyandgold.jpg")
+  background-size: cover
+  filter: brightness(54%)
+
+.webuy-gold-inside 
+  /* This will make it stack on top of the ::before */
+  position: relative
 .kings-of-gold 
   position: relative
   width: 100%
@@ -182,6 +203,10 @@ footer
   background-color: black
   // border-bottom: 10px solid $purple
 
+.pacman-image
+  width: 100%
+
+
 .footer--phone-bg
   position: relative
   background-image: url("images/phone.jpg")
@@ -218,6 +243,8 @@ footer
 .dropdown-menu > li:hover > .dropdown-submenu 
   display: block
 
+.hidden
+  display: none
 @media only screen and (max-width: 650px)
   // #logo 
   //   width: 80%

@@ -8,9 +8,6 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
-    <%= stylesheet_link_tag "/assets/unpoly/unpoly" %>
-    <%= javascript_include_tag "/assets/unpoly/unpoly", defer: true, type: "module" %>
-    <%= javascript_include_tag "unpoly_config", defer: true, type: "module" %>
     <%= stylesheet_link_tag "main.css" %>
     <%= javascript_include_tag "bootstrap.bundle.js" %>
     <%= javascript_include_tag "map-changer.js", defer: true, type: "module" %>
@@ -21,7 +18,7 @@
   <body>
     <div class="layout">
     <div class="layout--header">
-  <nav id="#navmenu" class="navbar navbar-expand-lg align-middle px-2 my-yellow-bg">
+  <nav id="#navmenu" class="navbar up-nav navbar-expand-lg align-middle px-2 my-yellow-bg">
 
     <a href="#" class="navbar-brand">
       <img src="images/logo.jpg" id="logo" alt="">
@@ -34,27 +31,27 @@
 
       <ul class="navbar-nav ms-auto " id="navmenu">
         <li class="nav-item ">
-          <a href="/index.html" class="nav-link text-dark">Home</a>
+          <a href="/index.html"  up-layer="root" class="nav-link text-dark">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/webuy.html" class="nav-link text-dark">We Buy</a>
+          <a href="/webuy.html"   up-layer="root" class="nav-link text-dark">We Buy</a>
         </li>
         <li class="nav-item">
-          <a href="/wesell.html" class="nav-link text-dark">We Sell</a>
+          <a href="/wesell.html"   up-layer="root" class="nav-link text-dark">We Sell</a>
         </li>
         <li class="nav-item">
-          <a href="/aboutus.html" class="nav-link text-dark">About Us</a>
+          <a href="/aboutus.html"   up-layer="root" class="nav-link text-dark">About Us</a>
         </li>
         <li class="nav-item">
-          <a href="/consignment.html" class="nav-link text-dark">Consignment</a>
+          <a href="/consignment.html"  up-layer="root"  class="nav-link text-dark">Consignment</a>
         </li>
         <li class="nav-item">
-          <a href="/contact.html" class="nav-link text-dark">Contact</a>
+          <a href="/contact.html"  up-layer="root"  class="nav-link text-dark">Contact</a>
         </li>
         <li class="nav-item">
           <a href="#instructors" data-submenu-link class="nav-link text-dark dropdown-toggle">Social Media</a>
           <div class="my-submenu">
-            <ul data-dropdown class="my-submenu--dropdown p-3 rounded shadow-lg bg-light">
+            <ul data-dropdown class="my-submenu--dropdown js-dropdown p-3 rounded shadow-lg bg-light">
               <li> <img class="my-submenu--icon" src="images/facebook.svg" alt="">
                 <span class="fw-bold class=" my-submenu--icon""> Facebook</span>
               </li>

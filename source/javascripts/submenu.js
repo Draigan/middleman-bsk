@@ -15,6 +15,8 @@ link.addEventListener("click", () => {
 document.addEventListener("click", function() {
   isHidden = true;
   dropdown.hidden = true;
+  console.log(dropdown)
+  console.log(dropdown.hidden)
 });
 
 dropdown.addEventListener("click", function(ev) {
@@ -24,3 +26,5 @@ dropdown.addEventListener("click", function(ev) {
 link.addEventListener("click", function(ev) {
   ev.stopPropagation();
 }, false);
+
+
