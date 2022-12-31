@@ -24,22 +24,22 @@ og_image: chess.png
           <div class="carousel-item active">
             <img src="images/hero1.jpg" class="d-block w-100 carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+              <h5></h5>
+              <p></p>
             </div>
           </div>
           <div class="carousel-item">
             <img src="images/hero2.jpg" class="d-block w-100 carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+              <h5></h5>
+              <p></p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/hero3.jpg" class="d-block w-100 carousel-image" alt="...">
+            <img src="images/goldchain.jpg" class="d-block w-100 carousel-image" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <h5></h5>
+              <p></p>
             </div>
           </div>
         </div>
@@ -73,7 +73,8 @@ og_image: chess.png
               <p class="card-text">
               (647) 348-1763
               </p>
-              <a href="#" class="btn main-button">Directions</a>
+              <a href="https://www.google.com/maps/place/Buy+%26+Sell+Kings/@43.6898319,-79.2977083,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4cc21929d303b:0x4fd4a936a9397d0d!8m2!3d43.6898317!4d-79.295135"
+              class="btn main-button" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
           </div>
         </div>
@@ -88,7 +89,8 @@ og_image: chess.png
               <p class="card-text">
               (416) 438-0887
               </p>
-              <a href="#" class="btn main-button">Directions</a>
+              <a href="https://www.google.com/maps/place/Buy+%26+Sell+Kings/@43.761966,-79.228349,17z/data=!3m1!5s0x89d4d04179691dcb:0xa62448c2a800e9a!4m5!3m4!1s0x89d4d0410bff5989:0x6cc44fd932370aeb!8m2!3d43.7619622!4d-79.2257741" 
+              class="btn main-button" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
           </div>
         </div>
@@ -103,7 +105,8 @@ og_image: chess.png
               <p class="card-text">
               (905) 683-2212
               </p>
-              <a href="#" class="btn main-button">Directions</a>
+              <a href="https://www.google.com/maps/place/Buy+%26+Sell+Kings/@43.8698555,-78.8525177,17z/data=!3m1!4b1!4m5!3m4!1s0x89d51d9931c5e5fb:0x46bd8bac57bab1f3!8m2!3d43.8698517!4d-78.8499428" 
+              class="btn main-button" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
           </div>
         </div>
@@ -118,7 +121,8 @@ og_image: chess.png
               <p class="card-text">
               (905) 240-2247
               </p>
-              <a href="#" class="btn main-button">Directions</a>
+              <a href="https://www.google.com/maps/place/Buy+%26+Sell+Kings/@43.8424444,-79.0259747,17z/data=!3m2!4b1!5s0x89d4dfd34c3b91b3:0x830988cc2e77b346!4m5!3m4!1s0x89d4dfd82600fbbf:0x10c4bc3d859c487b!8m2!3d43.8424406!4d-79.0211038" 
+              class="btn main-button" target="_blank" rel="noopener noreferrer">Directions</a>
             </div>
           </div>
         </div>
@@ -153,28 +157,10 @@ og_image: chess.png
     </section>
 
     <!-- Youtube Video -->
-    <section class="bg-dark">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col align-items-center justify-content-center">
-            <div class="container">
-              <h1 class="display-4 pb-3 text-center text-light">
-                Take Our Store Tour!
-              </h1>
-              <div class="iframe-container mx-auto">
-                <iframe src="https://www.youtube.com/embed/h4FMVd1Q5Q0" title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
+    <%= partial('/youtube-video', locals: { url: "https://www.youtube.com/embed/h4FMVd1Q5Q0", heading: "Take Our Store Tour!" })  %>
 
     <!-- Buy And Sell In The GTA row/grid -->
-    <section class="gta bg-dark">
+    <section class="gta py-3 bg-dark">
       <div class="container">
 
 
@@ -185,31 +171,17 @@ og_image: chess.png
                 <span class="my-yellow-color">#1</span> Buy & Sell In The GTA
               </h1>
               <p class="text-light">
-              <ul class="text-light">
+              <ul class="text-light fs-5">
                 <li>
                   <span class="my-yellow-color"> Buy & Sell Kings</span> are the premier buy and sell specialists in the
                   greater Toronto area.
                 </li>
                 <li>
-                  We buy and sell a variety of new and used goods at fantastic prices!
+                  Our stores feature seperate departments for gold and silver jewellery, video games, home electronics, car electronics, and much more!
                 </li>
-                <!-- <li> -->
-                <!--   Our stores feature seperate -->
-                <!--   departments -->
-                <!--   for -->
-                <!--   gold and silver jewellery, video games, home electronics, car electronics, and much more! -->
-                <!-- </li> -->
-                <!-- <li> -->
-                <!--   Our extensive -->
-                <!--   selection of discount new and used goods is unmatched in the GTA. -->
-                <!-- </li> -->
-                <!-- <li> -->
-
-                <!-- You never know what treasure you will -->
-                <!-- find -->
-                <!-- in -->
-                <!-- our stores! -->
-                <!-- </li> -->
+                <li>
+                  You never know what treasure you will find in our stores!
+                </li>
               </ul>
               </p>
             </div>
@@ -410,19 +382,23 @@ og_image: chess.png
     <div class="container-fluid">
       <section class="map d-flex flex-column align-items-center justify-content-center">
       <h1 class="display-5"> Find Location</h1>
-        <div class="map--buttons  pb-1">
-          <button class="map-button p-1 btn btn-primary " data-toronto-button>
+        <div class="map--buttons d-flex justify-content-center text-center  pb-1">
+        <div>
+          <button class="map-button mb-1 btn btn-primary " data-toronto-button>
             Toronto
           </button>
-          <button class="map-button btn btn-primary" data-scarborough-button>
+          <button class="map-button mb-1 btn btn-primary" data-scarborough-button>
             Scarborough
           </button>
-          <button class="map-button btn btn-primary" data-oshawa-button>
+          </div>
+        <div>
+          <button class="map-button mb-1 btn btn-primary" data-oshawa-button>
             Oshawa
           </button>
-          <button class="map-button btn btn-primary" data-ajax-button>
+          <button class="map-button mb-1 btn btn-primary" data-ajax-button>
             Ajax
           </button>
+          </div>
         </div>
         <div class="container-fluid text-center" data-toronto-map>
         TORONTO (647) 348-1763
@@ -457,42 +433,3 @@ og_image: chess.png
     </div>
 
   </main>
-
-
-2852 Danforth Ave
-
-
- 
-
- 
-
- 
--# <%#   -# PARTIAL EXAMPLES %>
-
--# <%# -# %section %>
-
--# <%# -#   .project-wrapper %>
--# <%# -#     .project-wrapper--header %>
--# <%# -#       Relevant Projects %>
-
--# <%# -#     .project-wrapper--inner-section %>
--# <%# -#       - projects_including_skills { |p| p.featured }.each do |p|  %>
--# <%# -#         = partial('/projects/project', locals: { project: p })  %>
-
--# <%# -#     .project-wrapper--footer %>
--# <%# -#       = link_to "/projects.html", class:"project--view-more" do %>
--# <%# -#         View All Projects %>
-
--# <%# -# %section %>
-
--# <%# -#   .skill-wrapper %>
--# <%# -#     .skill-wrapper--header %>
--# <%# -#       Relevant Skills %>
--# <%# -#     .skill-wrapper--inner-section %>
-
--# <%# -#       - skills_including_projects.select { |p| p.featured }.each do |p|  %>
--# <%# -#         = partial('skills/skill', locals: {skill: p, bem_modifier_skill_description: "" } )  %>
-
--# <%# -#     .skill-wrapper--footer %>
--# <%# -#       = link_to "/skills.html", class:"project--view-more" do %>
--# <%# -#         View All Skills %>
